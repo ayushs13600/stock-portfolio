@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="header">
+    <div class="text">
+      <h2>
+        Available data for current Stock and Mutual Funds Price in Market.
+      </h2>
+    </div>
+  </div>
+  <div class="wrapper">
+    <div class="table">
+      <div class="heading"><h3>STOCKS AVAILABLE</h3></div>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let stock of allStock">
+            <td>{{ stock.stockName }}</td>
+            <td>{{ stock.stockValue }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="table">
+      <div class="heading"><h3>MUTUAL FUNDS AVAILABLE</h3></div>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let mf of allMutualFund">
+            <td>{{ mf.mutualFundName }}</td>
+            <td>{{ mf.mutualFundValue }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

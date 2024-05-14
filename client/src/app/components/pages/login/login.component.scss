@@ -1,0 +1,188 @@
+.container {
+  padding: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+ min-height: fit-content;
+  .wrapper {
+    color: #3c767a;
+    min-width: 100%;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInAnimation ease 0.8s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    border-radius: 10px;
+    @keyframes fadeInAnimation {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    .formHeader{
+      width: 50%;
+      min-height: 30vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .imageForm{
+        display: flex;
+        justify-content: center;
+        width:70%;
+        img{
+          width:100%
+        }
+      }
+    }
+    .formDiv{
+      display: flex;
+      flex-direction: column;
+      width:40%;
+      height:50vh;
+      .text {
+        display: flex;
+        justify-content:center;
+        h2 {
+          font-size: 1.8rem;
+          font-family: 'Raleway' , 'sans serif';
+        }
+      }
+      .form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height:50vh;
+        width: 100%;
+        margin-top: 10px;
+        .input {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-top: 20px;
+          width: 60%;
+          input {
+            border: 0;
+            font-size: 1.5rem;
+            width: 100%;
+            font-weight: 500;
+            padding: 10px;
+            letter-spacing: 2px;
+            border-radius: 7px;
+            background-color: #78bfdb;
+            color: #feffff;
+            cursor: pointer;
+            box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px,
+              rgba(0, 0, 0, 0.24) 0px 1px 2px;
+              &:hover {
+                background: #CDE8E6;
+                border: solid 1px #5B96A9;
+                border-radius: 6px;
+                color: #5B96A9;
+              }
+              &::placeholder{
+                color: #feffff;
+              }
+          }
+        }
+  
+        .btn-div {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-top: 20px;
+          width: 30%;
+          button {
+            border: 0;
+            font-size: 1.5rem;
+            font-weight: 500;
+            padding: 10px;
+            width: 100%;
+            letter-spacing: 2px;
+            border-radius: 7px;
+            background-color: #61aac3;
+            color: #CDE8E6;
+            cursor: pointer;
+            box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px,
+              rgba(0, 0, 0, 0.24) 0px 1px 2px;
+              &:hover {
+                background: #CDE8E6;
+                border: solid 1px #61aac3;
+                border-radius: 6px;
+                color: #5B96A9;
+              }
+          }
+        }
+      }
+    }
+  }
+}
+@media  (max-width:952px) {
+  .container{
+    .wrapper{
+      flex-direction: column;
+      .formHeader{
+        width: 100%;
+      }
+      .formDiv{
+        width:100%;
+        .text{
+          h2{
+            font-size:1.5rem;
+          }
+        }
+        .form{
+          .input{
+            input{
+              font-size:1.2rem;
+            }
+          }
+        }
+        .btn-div{
+          button{
+            font-size:1.2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media  (max-width:512px){
+  .container{
+    .wrapper{
+      flex-direction: column;
+      .formHeader{
+        width: 100%;
+      }
+      .formDiv{
+        width:100%;
+        .text{
+          text-align: center;
+          h2{
+            font-size:1.2rem;
+          }
+        }
+        .form{
+          .input{
+            input{
+              font-size:1.2rem;
+            }
+          }
+        }
+        .btn-div{
+          width:20%;
+          button{
+            font-size:1rem;
+            font-weight: 200;
+          }
+        }
+      }
+    }
+  }
+}

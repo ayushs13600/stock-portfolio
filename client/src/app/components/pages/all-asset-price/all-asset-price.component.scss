@@ -1,0 +1,102 @@
+.container {
+    margin: 0;
+    padding: 0;
+    min-height:fit-content;
+    width: 100%;
+    overflow: hidden;
+    .text{
+        height:10vh;
+        display: flex;
+        flex-direction:column;
+        justify-content:center;
+        width: 100%;
+        align-items:center;
+        margin-left: 20px;
+        h2{
+            font-size:1.5rem;
+            font-family: 'Raleway' , 'sans serif';
+            color: #5B96A9;
+            letter-spacing: 2px;
+        }
+      }
+    .wrapper {
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        height:70vh;
+        width: 100%;
+        scroll-snap-align: scroll;
+        .heading{
+            font-size: 1.5rem;
+            letter-spacing:2px;
+            color: #5B96A9;
+            font-family: 'Raleway' , 'sans serif';
+            margin-bottom: 20px;
+        }
+        .table{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            min-height:40vh;
+            justify-content: flex-start;
+            align-items:center;
+
+            table{
+             width: fit-content;
+             display: block;
+             overflow-x: auto;
+             white-space: nowrap;
+             table-layout: auto;
+             border: none;
+             width: 60%;
+             th {
+                 background-color: #118ab2;
+                 border-radius: 4px;
+                 color: #ddffff;
+                 font-weight: 500;
+                 width: 100%;
+                 font-size: 1.8rem;
+                 height: 5vh;
+                 padding: 5px 10px;
+                 font-family: 'Raleway' ,sans-serif;
+                 letter-spacing: 2px;
+               }
+               td {
+                 padding: 5px 10px;
+                 border: none;
+                 width: 100%;
+                 font-family: 'Economica' ,sans-serif;
+                 letter-spacing: 2px;
+                 font-size: 1.5rem;
+                 background-color: #EEEEEE;
+                 border-bottom: 1px solid grey;
+                 color: #487676;
+               }
+            }
+         }
+    }
+}
+
+@media (max-width:952px) {
+    .container{
+        .text{
+            margin-bottom: 20px;
+            h2{
+                font-size: 1.2rem;
+            }
+        }
+        .wrapper{
+         flex-direction: column;
+         .heading{
+            margin-top: 20px;
+                font-size: 1.2rem;
+         }
+         .table{
+            table{
+                width: 80%;
+
+            }        
+         }
+        }
+    }
+}
