@@ -1,210 +1,145 @@
+$font-primary: "Economica", sans-serif;
+$font-secondary: "Raleway", sans-serif;
+
 .container {
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 0;
   width: 100%;
-  .wrapper {
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  width: 100%;
+
+  .table1 {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 70vh;
+    flex-direction: column;
     width: 100%;
-    .table1 {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      min-width: 300px;
-      justify-content: center;
-      align-items: center;
-      overflow-y: auto;
-      overflow-x: auto;
-      .heading {
-        margin-bottom: 20px;
-        h2 {
-          font-size: 1.8rem;
-          letter-spacing: 2px;
-          color: #5b96a9;
-          font-family: "Raleway", "sans serif";
-        }
+    overflow: auto;
+
+    .heading h2 {
+      font-size: 1.8rem;
+      color: #5b96a9;
+      font-family: $font-secondary;
+    }
+
+    table {
+      width: fit-content;
+      border-collapse: collapse;
+
+      th {
+        background-color: #118ab2;
+        color: #ddffff;
+        font-size: 1.8rem;
+        font-family: $font-secondary;
+        padding: 5px 10px;
       }
-      table {
-        width: fit-content;
-        display: block;
-        white-space: nowrap;
-        table-layout: auto;
-        border: none;
-        th {
-          background-color: #118ab2;
-          border-radius: 4px;
-          color: #ddffff;
-          font-weight: 500;
-          font-size: 1.8rem;
-          height: 5vh;
-          padding: 5px 10px;
-          font-family: "Raleway", sans-serif;
-          letter-spacing: 2px;
-        }
-        td {
-          padding: 5px 10px;
-          border: none;
-          font-family: "Economica", sans-serif;
-          letter-spacing: 2px;
-          font-size: 1.5rem;
-          background-color: #eeeeee;
-          text-align: center;
-          color: #487676;
-        }
+
+      td {
+        padding: 5px 10px;
+        font-family: $font-primary;
+        font-size: 1.5rem;
+        background-color: #eeeeee;
+        text-align: center;
+        color: #487676;
       }
     }
   }
-  .text {
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 20vh;
+  width: 100%;
+
+  h1 {
+    font-size: 1.8rem;
+    color: #118ab2;
+    font-family: $font-primary;
+  }
+
+  .btn {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    min-height: 20vh;
-    width: 100%;
-    h1 {
-      font-size: 1.8rem;
-      letter-spacing: 2px;
-      color: #118ab2;
-      font-family: "Economica", sans-serif;
-    }
-    .btn {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      height: 10vh;
-      width: 15%;
-      margin-top: 10px;
-      button {
-        border: 0;
-        font-size: 1.2rem;
-        font-weight: 700;
-        font-family: "Economica", sans-serif;
-        padding: 5px;
-        letter-spacing: 3px;
-        border-radius: 7px;
-        background-color: #118ab2;
-        color: #d1e5f6;
-        cursor: pointer;
-        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px,
-          rgba(0, 0, 0, 0.24) 0px 1px 2px;
-        &:hover {
-          background-color: #d1e5f6;
-          color: #118ab2;
-        }
-      }
+    height: 10vh;
+    width: 15%;
+    margin-top: 10px;
+
+    button {
+      font-size: 1.2rem;
+      font-weight: 700;
+      font-family: $font-primary;
+      padding: 5px;
+      letter-spacing: 3px;
+      border: none;
+      border-radius: 7px;
+      background-color: #118ab2;
+      color: #d1e5f6;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
       &:hover {
-        transform: scale(1.1);
-        transition: ease-in-out;
+        background-color: #d1e5f6;
+        color: #118ab2;
       }
     }
   }
 }
 
 @media (max-width: 952px) {
-  .container {
-    .wrapper {
-      flex-direction: column;
-      .table1 {
-        width: 80%;
-        .heading {
-          h2 {
-            font-size: 1.5rem;
-          }
-        }
-        margin-bottom: 30px;
-      }
-    }
-    .text {
-      h1 {
-        font-size: 1.5rem;
-      }
-      .btn {
-        width: 30%;
-        button {
-          font-size: 1rem;
-        }
-      }
+  .wrapper .table1 {
+    width: 80%;
+
+    .heading h2 {
+      font-size: 1.5rem;
     }
   }
 }
 
 @media (max-width: 612px) {
-  .container {
-    .wrapper {
-      flex-direction: column;
-      .table1 {
-        width: 70% !important;
-        .heading {
-          h2 {
-            font-size: 1.2rem;
-          }
-          table {
-            thead {
-              th {
-                font-size: 0.8rem;
-              }
-            }
-            tbody {
-              width: 30%;
-              td {
-                font-size: 0.8rem;
-              }
-            }
-          }
-        }
-      }
+  .wrapper .table1 {
+    width: 70%;
+
+    .heading h2 {
+      font-size: 1.2rem;
     }
-    .text {
-      h1 {
-        font-size: 1.2rem;
-      }
-      .btn {
-        width: 30%;
-        button {
-          font-size: 1rem;
-        }
+
+    table {
+      th, td {
+        font-size: 0.8rem;
       }
     }
   }
 }
 
 @media (max-width: 414px) {
-  .container {
-    .wrapper {
-      flex-direction: column;
+  .wrapper .table1 .heading h2 {
+    font-size: 1.2rem;
+  }
 
-      .table1 {
-        .heading {
-          h2 {
-            font-size: 1.2rem;
-          }
-          table {
-            width: 30%;
-
-            th {
-              font-size: 1rem;
-              width: 30%;
-            }
-            td {
-              font-size: 1rem;
-              width: 30%;
-            }
-          }
-        }
-      }
+  table {
+    th, td {
+      font-size: 1rem;
+      width: 30%;
     }
-    .text {
-      h1 {
-        font-size: 1.2rem;
-      }
-      .btn {
-        width: 30%;
-        button {
-          font-size: 1rem;
-        }
-      }
+  }
+  
+  .text h1 {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    width: 30%;
+    button {
+      font-size: 1rem;
     }
   }
 }

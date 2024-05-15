@@ -3,8 +3,8 @@
   "name": "client",
   "version": "0.0.0",
   "scripts": {
-    "predeploy" : "npm run build" ,
-    "deploy" : "gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
@@ -32,6 +32,7 @@
     "@angular/cli": "~14.1.0",
     "@angular/compiler-cli": "^14.1.0",
     "@types/jasmine": "~4.0.0",
+    "cssnano": "^7.0.1",
     "gh-pages": "^6.1.1",
     "jasmine-core": "~4.2.0",
     "karma": "~6.4.0",
